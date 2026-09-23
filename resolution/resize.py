@@ -2,6 +2,7 @@ import cv2 as cv
 import os
 
 photos_dir = "photos"
+output_dir = "resolution"
 target_width = 640
 
 for filename in os.listdir(photos_dir):
@@ -24,7 +25,7 @@ for filename in os.listdir(photos_dir):
 
     name_without_ext = os.path.splitext(filename)[0]
     new_filename = f"{name_without_ext}-640x{new_height}.png"
-    new_filepath = os.path.join(photos_dir, new_filename)
+    new_filepath = os.path.join(output_dir, new_filename)
 
     cv.imwrite(new_filepath, resized_img)
     print(f"Saved {new_filepath}")
