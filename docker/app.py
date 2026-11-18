@@ -10,7 +10,7 @@ import os
 import cv2
  
 app = Flask(__name__)
- 
+
 def detect_edges(input_path, output_path, T=100):
     T1 = int(T * 0.5)
     T2 = int(T)
